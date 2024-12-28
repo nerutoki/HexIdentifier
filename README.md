@@ -12,3 +12,6 @@ $ source env/bin/activate
 ```
 $ streamlit run test.py
 ```
+
+## Resources
+
