@@ -70,12 +70,11 @@ def analyze_image(prompt, image_url):
 
 if __name__ == "__main__":
 
-    image_local_path = ""
-    prompt = """
-    Give me a valid python dictionary where each key and value needs double quotes
-    around it. Make the key be a hex number and value be a color found in the 
-    image. Only output a python dictionary.
-    """
+    image_local_path = "sample_input_1.jpg"
+    prompt = """Give me a valid python dictionary where each key and value needs double quotes 
+    around it. Make the key be a valid hex number that looks like this
+    #C7700F, and value be a color found in the image. Only output a python dictionary. Do not output anything else.
+    """ 
     
     image_url = file_to_data_url(image_local_path)
     
