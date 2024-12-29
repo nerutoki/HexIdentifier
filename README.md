@@ -14,7 +14,7 @@ $ export HF_API_TOKEN=HF_XXXXX
 ## Run 
 
 ```
-$ streamlit run test.py
+$ streamlit run streamlit_app.py
 ```
 
 ## Resources
