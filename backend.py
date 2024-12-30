@@ -20,7 +20,7 @@ def file_to_data_url(file_path: str):
     return f"data:{mime_type};base64,{encoded_string}"
 
 
-def analyze_image(prompt, image_url):
+def analyze_image(prompt, image_url, HF_api_key):
     """ Take the hex number of the colors found in the given image.
 
     Args:
@@ -32,7 +32,10 @@ def analyze_image(prompt, image_url):
 
     """
 
-    api_key = os.environ["HF_API_TOKEN"]
+    # api_key = os.environ["HF_API_TOKEN"]
+
+    api_key = HF_api_key
+
     client = InferenceClient(api_key= api_key)
 
     messages = [
