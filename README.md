@@ -51,15 +51,27 @@ $ streamlit run streamlit_app.py
 
 ### Run
 
-1) Attach your image to the file uploader. If the image is not a PNG or JPEG/JPG, it will not run.
+1) Attach your image to the file uploader. If the image is not a PNG or JPEG/JPG file, it will not run.
+
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
 
 2) Enter your Hugging Face API Key.
 
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
+
 3) Click Start when both fields are filled. If program fail to start, please check if both fields were filled correctly.
+
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
+
+4) Example output.
 
 
 ## Resources
 - Sample images is from https://www.pexels.com/photo/concrete-road-between-trees-1563356/ 
 - file_to_data_url function is from https://huggingface.co/mistralai/Pixtral-12B-2409/discussions/6
+
+Website is programmed by Streamlit
+The Large Language Model, **Meta Llama-3.2-11B-Vision-Instruct** is found here.
+LLM Model is provided in Hugging Face
 
 
