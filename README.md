@@ -6,6 +6,7 @@ Identifies and return the five most common hex color codes in an image given by 
 # Getting Started
 
 ## Prerequisites
+This program uses Python 3.13.1.
 
 ## Installing
 
@@ -53,25 +54,26 @@ $ streamlit run streamlit_app.py
 
 1) Attach your image to the file uploader. If the image is not a PNG or JPEG/JPG file, it will not run.
 
-![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/upload_file_example.png?raw=true)
 
 2) Enter your Hugging Face API Key.
 
-![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/fill_api_token_example.png?raw=true)
 
 3) Click Start when both fields are filled. If program fail to start, please check if both fields were filled correctly.
 
-![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/hexIdentifier_website_page.png?raw=true)
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/start_button_location.png?raw=True)
 
 4) Example output.
 
+![Website Interface](https://github.com/nerutoki/HexIdentifier/blob/main/results_example.png?raw=True)
+
 
 ## Resources
-- Sample images is from https://www.pexels.com/photo/concrete-road-between-trees-1563356/ 
+- Sample image is from Craig Adderley at [Pexels](https://www.pexels.com/photo/concrete-road-between-trees-1563356/ )
+
 - file_to_data_url function is from https://huggingface.co/mistralai/Pixtral-12B-2409/discussions/6
 
-Website is programmed by Streamlit
-The Large Language Model, **Meta Llama-3.2-11B-Vision-Instruct** is found here.
-LLM Model is provided in Hugging Face
-
-
+- Website is programmed by 
+The Large Language Model, [**Meta Llama-3.2-11B-Vision-Instruct**](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct) is used.
+- LLM Model is accessed through [Hugging Face]([Hugging Face](https://huggingface.co/))
