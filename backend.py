@@ -31,9 +31,7 @@ def analyze_image(prompt, image_url, HF_api_key):
         response (str): Answer from LLM
 
     """
-
-    # api_key = os.environ["HF_API_TOKEN"]
-
+    
     api_key = HF_api_key
 
     client = InferenceClient(api_key= api_key)
