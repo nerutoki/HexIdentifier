@@ -34,11 +34,11 @@ def custom_container(background_color: str,
 st.set_page_config(layout="wide", 
                    page_title="Hex Color Code Identifier")
 
-st.header("**:blue-background[Hex Number Identifier]**")
-st.markdown('''The hex color code finder given an image. 
+st.header("**:blue-background[Hex Color Code Identifier]**")
+st.markdown('''A hex color code finder.
             Please upload an image from your local computer and 
-            put in your Hugging Face API Token in order to 
-            start the process below. Press start when 
+            fill in your Hugging Face API Token in the fields below in order to 
+            start the process below. Press Start when 
             both fields has been filled.
             \nThe five most common hex color codes 
             found in the image will be displayed. 
@@ -72,9 +72,8 @@ with col2:
                      type = "secondary")
     
     st.markdown(''' If Hugging Face API Token is not inputted correctly,
-                the website will not be able to proceed with your request.
-                If file was inputted correctly, please check your 
-                Key.
+                the website may not be able to proceed with your request.
+                Please check if both fields were filled in correctly.
                 ''')
     st.markdown("### :red-background[Original Image]")
 
@@ -87,8 +86,8 @@ with col1:
                 \nThe process can be repeated by 
                 uploading a new image.
                 \n Accepted Files: 
-                \n- .jpg
-                \n- .png
+                \n- JPG/JPEG
+                \n- PNG
                 ''')
 
     uploaded_file = st.file_uploader(label = "File", type=['png', 'jpg'],
@@ -116,6 +115,7 @@ with col1:
                     image_url = file_to_data_url(f.name)
 
                 temp_result = image_url
+
             elif resize_image.format == "JPEG":
                 resize_image = resize_image.resize((256,256))
                 resize_image.save(buffer, format='JPEG', quality=75)

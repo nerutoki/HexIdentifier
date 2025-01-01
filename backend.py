@@ -72,10 +72,17 @@ def analyze_image(prompt, image_url, HF_api_key):
 if __name__ == "__main__":
 
     image_local_path = "sample_input_1.jpg"
-    prompt = """Give me a valid python dictionary where each key and value needs double quotes 
-    around it. Make the key be a valid hex number that looks like this
-    #C7700F, and value be a color found in the image. Only output a python dictionary. Do not output anything else.
-    """ 
+    prompt = """
+            Analyze the following image for all the hex values. Return all the hex values
+            in the following format: {"#C7700F": "Light Green"}. 
+            Here are the rules:
+            1) Make sure all hex numbers and colors are valid.
+            2) Only use valid unicode for Python.
+            3) Make sure the output is only one dictionary.
+            4) Output only 5 of the most common hex numbers in the image.
+            Make sure to only output a valid Python dictionary and nothing else.
+            Output a valid Python dictionary.
+            """
     
     image_url = file_to_data_url(image_local_path)
     
@@ -83,7 +90,6 @@ if __name__ == "__main__":
         prompt = prompt, image_url = image_url
     )
 
-    # using ast.literal_eval()
     # convert dictionary string to dictionary
     res = ast.literal_eval(response)
 
