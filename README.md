@@ -2,7 +2,9 @@
 
 ## Overview
 
-Runs a website page that identifies and returns the five most common Hex Color Codes from an image given by the user. It uses the Large Language Model, **Meta Llama-3.2-11B-Vision-Instruct** to identify the Hex Color Codes. **Hugging Face's account is required.**
+Runs a website page that identifies and returns the five most common Hex Color Codes from an image given by the user. It uses the Large Language Model, **Meta's Llama-3.2-11B-Vision-Instruct Model** to identify the Hex Color Codes. 
+
+**Hugging Face's account is required.**
 
 ![Website Interface Example](./docs/hexIdentifier_website_page.png)
 
@@ -24,7 +26,7 @@ This program uses:
 - Python 3.13.1.
 
 1) Create a Free API Key at [Hugging Face](https://huggingface.co/).
-2) Ask permission to usage of model  [Llama-3.2-11B-Vision-Instruct](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct") on Hugging Face in order to use this Streamlit application.
+2) Ask permission for usage of model  [Llama-3.2-11B-Vision-Instruct](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct") on Hugging Face in order to use this Streamlit application.
 
 ### Installing
 
@@ -75,7 +77,7 @@ $ streamlit run streamlit_app.py
 
 
 ## Resources
-- Sample image is from Craig Adderley at [Pexels](https://www.pexels.com/photo/concrete-road-between-trees-1563356/ )
+- Sample image is from Craig Adderley at Pexels https://www.pexels.com/photo/concrete-road-between-trees-1563356/ .
 - file_to_data_url function is from https://huggingface.co/mistralai/Pixtral-12B-2409/discussions/6
-- The Large Language Model, [Meta Llama-3.2-11B-Vision-Instruct https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct) is used.
+- The Large Language Model, Meta Llama-3.2-11B-Vision-Instruct, https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct is used.
 - Create Free Hugging Face Token at https://huggingface.co/ 

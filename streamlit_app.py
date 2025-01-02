@@ -38,8 +38,8 @@ st.header("**:blue-background[Hex Color Code Identifier]**")
 st.markdown('''A hex color code finder.
             Please upload an image from your local computer and 
             fill in your Hugging Face API Token in the fields below in order to 
-            start the process below. Press Start when 
-            both fields has been filled.
+            start the process. Press "Start" when 
+            both fields have been filled.
             \nThe five most common hex color codes 
             found in the image will be displayed. 
             ''')
@@ -53,12 +53,13 @@ col1, col2 = st.columns(spec = [4,6], gap = "small",
 with col2:
     st.markdown("### :red-background[Hugging Face API Token]")
 
-    st.markdown('''Please provide Hugging Face API Token. 
-                  Token will not be saved after closing page. Instructions
-                  on creating a Hugging Face API Token can be found below.
-                  Please ask permission from Llama-3.2-11B-Vision-Instruct
+    st.markdown('''
+                Please provide a Hugging Face API Token. Your Token will not be stored on this website. Instructions on creating a Hugging Face API Token can be found below.
+                  
+                Please ask permission from Meta's Llama-3.2-11B-Vision-Instruct
                 on Hugging Face in order to use this website. Access to model
-                can be found below.''')
+                can be found below.
+                ''')
 
     HF_api_key = st.text_input(label=''' # **Hugging Face Account required.**
                   ''', type="password", placeholder="Token Here")
@@ -71,7 +72,7 @@ with col2:
     col4.link_button(label = "Create Hugging Face API Token", url="https://huggingface.co/docs/hub/en/security-tokens",
                      type = "secondary")
     
-    st.markdown(''' If Hugging Face API Token is not inputted correctly,
+    st.markdown(''' If Hugging Face API Token is not filled in correctly,
                 the website may not be able to proceed with your request.
                 Please check if both fields were filled in correctly.
                 ''')
@@ -81,7 +82,7 @@ with col1:
 
     st.markdown(''' 
                 ### :red-background[Upload File Below]''')
-    st.markdown('''Please upload an image from local computer.
+    st.markdown('''Please upload an image from your local computer.
                 Data is not stored on this website.
                 \nThe process can be repeated by 
                 uploading a new image.
@@ -127,13 +128,14 @@ with col1:
                 temp_result = image_url
 
             prompt = """
-            Analyze the following image for all the hex values. Return all the hex values
-            in the following format: {"#C7700F": "Light Green"}. 
+            Analyze the following image for all the hex color codes. Return five of the most
+            common hex color codes from the image, in the following format:
+              {"#C7700F": "Light Green"}. 
             Here are the rules:
-            1) Make sure all hex numbers and colors are valid.
+            1) Make sure all hex color codes and colors are valid.
             2) Only use valid unicode for Python.
             3) Make sure the output is only one dictionary.
-            4) Output only 5 of the most common hex numbers in the image.
+            4) Output only 5 of the most common hex color code in the image.
             Make sure to only output a valid Python dictionary and nothing else.
             Output a valid Python dictionary.
             """
